@@ -14,3 +14,7 @@ Pour lancer une détection sur images/mecs.jpg:
 > Le paramètre `--classes 0` permet de détecter uniquement les personnes.
 
 Les résultats seront générés dans yolov5/runs/detect.
+
+Pour utiliser la webcam:
+
+    python detect.py --classes 0 --source 0
