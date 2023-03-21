@@ -21,8 +21,6 @@ while success:
 
 list_images = sorted(os.listdir("images"))
 
-print(list_images)
-
 for image in list_images:
     results = model("images/"+image)
     # Inference
