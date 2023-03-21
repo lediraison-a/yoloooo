@@ -13,13 +13,15 @@ vidcap = cv2.VideoCapture(video)
 success,image = vidcap.read()
 count = 0
 while success:
-    cv2.imwrite("images/frame%d.jpg" % count, image)     # save frame as JPEG file      
+    cv2.imwrite("images/frame%04d.jpg" % count, image)     # save frame as JPEG file      
     success,image = vidcap.read()
     print('Read a new frame: ', success)
     count += 1
 
 
-list_images = os.listdir("images")
+list_images = sorted(os.listdir("images"))
+
+print(list_images)
 
 for image in list_images:
     results = model("images/"+image)
