@@ -23,12 +23,5 @@ list_images = os.listdir("images")
 
 for image in list_images:
     results = model("images/"+image)
-    print(type(results))
     # Inference
-    results.crop("test")
-
-"""
-print(results.pandas().xyxy[0])
-
-# Results
-results.crop()  # or .show(), .save(), .crop(), .pandas(), etc."""
+    results.crop()
