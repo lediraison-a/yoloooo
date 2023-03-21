@@ -4,6 +4,9 @@ because you only live once 🧀
 
 ## Pour le groupe qui s'occupe d'Openpose
 
+    mkdir images
+    mkdir runs/detect
+
 Il faut juste lancer le `main.py`.
 
 ### Fonctionnement du programme
