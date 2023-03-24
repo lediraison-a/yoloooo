@@ -4,6 +4,13 @@ because you only live once 🧀
 
 ## Pour le groupe qui s'occupe d'Openpose
 
+Il faut :
+
+    git clone https://github.com/ultralytics/yolov5
+    cd yolov5 
+    pip install -r requirements.txt
+    cd ..
+
     mkdir images
     mkdir runs/detect
 
