@@ -3,6 +3,7 @@ import cv2
 import cv2
 import os
 from PIL import Image
+import shutil
 
 # Model
 model = torch.hub.load("ultralytics/yolov5", "yolov5s")  # or yolov5n - yolov5x6, custom
@@ -25,3 +26,17 @@ for image in list_images:
     results = model("images/"+image)
     # Inference
     results.crop()
+
+    ######################
+    # OPENPOSE CODE HERE #
+    ######################
+
+
+# Delete generated frames
+print("Removing generated frames ...")
+for file in os.listdir('images'):
+    os.remove("images/"+file)
+
+# Delete cropped images & directories
+print("Removing /runs directory ...")
+shutil.rmtree("runs/")
