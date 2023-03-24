@@ -130,7 +130,7 @@ net = cv.dnn.readNetFromTensorflow("graph_opt.pb")
 model = torch.hub.load("ultralytics/yolov5", "yolov5s")  # or yolov5n - yolov5x6, custom
 
 # Transform video into frames
-video = "videos/thomas_squat.mp4"  # or file, Path, PIL, OpenCV, numpy, list
+video = "videos/thomas_squat_old.mp4"  # or file, Path, PIL, OpenCV, numpy, list
 vidcap = cv2.VideoCapture(video)
 success,image = vidcap.read()
 count = 0
@@ -166,7 +166,7 @@ while i < len(list_images):
         nbCrop = ""
     frame = cv2.imread('C:\ISEN\GL\OpenPose\yoloooo\\runs\detect\exp'+nbCrop+'\crops\person\\frame'+nbFrame+'.jpg')
     rep, testRep = checkSquat(frame, BODY_PARTS, POSE_PAIRS, inWidth, inHeight, rep, testRep)
-    cv2.waitKey(30)
+    cv2.waitKey(10)
     print('nb rep = '+str(rep))
     i=i+1
 
